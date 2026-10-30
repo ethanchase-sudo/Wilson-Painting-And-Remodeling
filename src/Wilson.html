@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wilson Painting And Remodeling — Cleveland, Ohio</title>
+<meta name="description" content="Interior & exterior painting, drywall finishing and hardwood flooring in Cleveland, OH. Call (216) 512-3623 for a free quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#171b20;
+  --ink-2:#262c33;
+  --plaster:#f2eee6;
+  --plaster-2:#e8e2d6;
+  --paper:#faf8f4;
+  --line:rgba(23,27,32,.14);
+  --line-l:rgba(242,238,230,.18);
+  --mute:#5d6168;
+  --rust:oklch(0.58 0.13 42);
+  --rust-d:oklch(0.48 0.12 40);
+  --sage:oklch(0.58 0.05 150);
+  --serif:'Instrument Serif', Georgia, serif;
+  --sans:'Manrope', 'Helvetica Neue', Helvetica, sans-serif;
+  --mono:'JetBrains Mono', ui-monospace, monospace;
+  --pad:clamp(20px,4.5vw,72px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:.98;letter-spacing:-.01em}
+p{text-wrap:pretty}
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+.wrap{padding-inline:var(--pad);max-width:1560px;margin-inline:auto}
+
+/* ---------- NAV ---------- */
+.topbar{background:var(--ink);color:var(--plaster);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:20px}
+.topbar .mono{font-size:10.5px;opacity:.75}
+.topbar a:hover{color:#fff}
+.topbar .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sage);margin-right:8px;vertical-align:middle;box-shadow:0 0 0 3px rgba(120,160,130,.2)}
+nav.main{position:sticky;top:0;z-index:50;background:rgba(250,248,244,.86);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s, background .3s}
+nav.main.scrolled{border-color:var(--line)}
+nav.main .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-mark{width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--plaster);display:grid;place-items:center;font-family:var(--serif);font-size:26px;font-style:italic;position:relative;overflow:hidden}
+.brand-mark::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:var(--rust)}
+.brand-mark span{position:relative;z-index:1;transform:translateY(-2px)}
+.brand-name{font-family:var(--serif);font-size:27px;line-height:1}
+.brand-sub{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:4px}
+.nav-links{display:flex;gap:34px;font-size:14.5px;font-weight:500}
+.nav-links a{position:relative;padding:6px 0}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--rust);transition:right .35s cubic-bezier(.7,0,.2,1)}
+.nav-links a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:14.5px;transition:transform .25s, background .25s, color .25s;white-space:nowrap}
+.btn-ink{background:var(--ink);color:var(--plaster)}
+.btn-ink:hover{background:var(--rust-d)}
+.btn-rust{background:var(--rust);color:#fff}
+.btn-rust:hover{background:var(--rust-d)}
+.btn-line{border:1px solid currentColor}
+.btn-line:hover{background:var(--ink);color:var(--plaster);border-color:var(--ink)}
+.btn .arr{display:inline-block;transition:transform .3s}
+.btn:hover .arr{transform:translateX(4px)}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line)}
+.burger i{display:block;width:16px;height:1.5px;background:var(--ink);margin:4px auto}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;padding-top:clamp(36px,5vw,72px)}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,4vw,64px);align-items:end}
+.hero h1{font-size:clamp(58px,8.6vw,148px);letter-spacing:-.025em}
+.hero h1 em{font-style:italic;color:var(--rust)}
+.hero .eyebrow{display:flex;gap:16px;align-items:center;margin-bottom:32px;color:var(--mute)}
+.hero .eyebrow::before{content:"";width:40px;height:1px;background:currentColor}
+.hero-lede{max-width:470px;font-size:18px;color:var(--ink-2);margin-top:34px}
+.hero-ctas{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.hero-media{position:relative;aspect-ratio:4/4.6;border-radius:4px;overflow:hidden;clip-path:inset(0 0 0 0)}
+.hero-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:heroZoom 2.4s cubic-bezier(.2,.7,.1,1) forwards}
+.hero-media::before{content:"";position:absolute;inset:0;background:var(--plaster);z-index:2;transform-origin:top;animation:wipe 1.3s .15s cubic-bezier(.75,0,.15,1) forwards}
+@keyframes wipe{to{transform:scaleY(0)}}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-chip{position:absolute;left:-1px;bottom:-1px;background:var(--paper);padding:22px 26px 20px 0;z-index:3;display:flex;gap:16px;align-items:center;border-top-right-radius:4px}
+.hero-chip .sw{display:flex;gap:4px}
+.hero-chip .sw i{width:16px;height:44px;border-radius:2px}
+.hero-chip b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;line-height:1}
+.hero-chip small{color:var(--mute);font-size:12.5px}
+.hero-tag{position:absolute;top:18px;right:18px;z-index:3;background:rgba(23,27,32,.72);color:var(--plaster);backdrop-filter:blur(8px);padding:9px 14px;border-radius:999px}
+
+.svc-strip{margin-top:clamp(48px,6vw,90px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap}
+.svc-track{display:inline-flex;animation:marq 38s linear infinite;padding:22px 0}
+.svc-track span{font-family:var(--serif);font-size:clamp(28px,3vw,44px);padding:0 28px;display:inline-flex;align-items:center;gap:56px}
+.svc-track span::after{content:"";width:10px;height:10px;background:var(--rust);transform:rotate(45deg)}
+.svc-track span:nth-child(even){font-style:italic;color:var(--mute)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- SECTION HEADS ---------- */
+section{position:relative}
+.sec{padding-block:clamp(80px,10vw,150px)}
+.sec-head{display:grid;grid-template-columns:200px 1fr auto;gap:32px;align-items:end;margin-bottom:clamp(44px,5vw,80px)}
+.sec-head .idx{color:var(--mute);align-self:start;padding-top:12px}
+.sec-head h2{font-size:clamp(46px,6vw,96px)}
+.sec-head h2 em{font-style:italic;color:var(--rust)}
+.sec-head p{max-width:380px;color:var(--mute)}
+
+/* ---------- SERVICES ---------- */
+.svc-list{border-top:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:200px 1fr 1.15fr;gap:32px;padding:clamp(36px,4vw,56px) 0;border-bottom:1px solid var(--line);align-items:start}
+.svc .num{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--mute);padding-top:14px}
+.svc h3{font-size:clamp(40px,4.4vw,70px);margin-bottom:22px}
+.svc h3 em{font-style:italic}
+.svc .copy p{color:var(--ink-2);max-width:470px}
+.svc .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.svc .tags span{font-size:12.5px;font-weight:500;padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.svc .media{position:relative;aspect-ratio:16/10.5;overflow:hidden;border-radius:4px;background:var(--plaster-2)}
+.svc .media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.1,1)}
+.svc:hover .media img{transform:scale(1.04)}
+.svc .media .cap{position:absolute;left:14px;bottom:14px;background:var(--paper);padding:7px 11px;border-radius:2px;font-size:10px}
+.svc .media.duo{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:none}
+.svc .media.duo div{overflow:hidden;border-radius:4px;position:relative}
+.svc-more{display:grid;grid-template-columns:200px 1fr 1fr;gap:32px;padding-top:40px}
+.svc-more .mini{display:flex;gap:18px;align-items:baseline;padding:22px 0;border-top:1px solid var(--line)}
+.svc-more .mini h4{font-family:var(--serif);font-weight:400;font-size:30px}
+.svc-more .mini p{color:var(--mute);font-size:14.5px}
+
+/* ---------- TRANSFORMATIONS (dark) ---------- */
+.dark{background:var(--ink);color:var(--plaster)}
+.dark .sec-head .idx,.dark .sec-head p{color:rgba(242,238,230,.6)}
+.ba-tabs{display:flex;gap:6px;margin-bottom:22px;flex-wrap:wrap}
+.ba-tab{padding:11px 20px;border-radius:999px;border:1px solid var(--line-l);font-size:14px;font-weight:500;color:rgba(242,238,230,.75);transition:.25s}
+.ba-tab:hover{color:#fff;border-color:rgba(242,238,230,.5)}
+.ba-tab.on{background:var(--plaster);color:var(--ink);border-color:var(--plaster)}
+.ba-stage{display:grid;grid-template-columns:1fr 340px;gap:clamp(24px,3vw,48px);align-items:stretch}
+.ba{position:relative;aspect-ratio:3/2;overflow:hidden;border-radius:4px;user-select:none;touch-action:none;cursor:ew-resize;background:#000}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .after{clip-path:inset(0 0 0 var(--p,50%))}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;background:var(--plaster);transform:translateX(-1px)}
+.ba .knob{position:absolute;top:50%;left:50%;width:62px;height:62px;border-radius:50%;background:var(--plaster);color:var(--ink);transform:translate(-50%,-50%);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);font-size:18px;letter-spacing:6px;padding-left:6px}
+.ba .lbl{position:absolute;top:18px;padding:8px 13px;border-radius:2px;background:rgba(23,27,32,.75);backdrop-filter:blur(6px);color:var(--plaster);transition:opacity .3s}
+.ba .lbl.b{left:18px}.ba .lbl.a{right:18px;background:var(--rust);color:#fff}
+.ba-info{display:flex;flex-direction:column;justify-content:space-between;border-top:1px solid var(--line-l);padding-top:26px}
+.ba-info h3{font-size:44px;margin:14px 0 18px}
+.ba-info p{color:rgba(242,238,230,.72);font-size:15px}
+.ba-info .hint{display:flex;align-items:center;gap:12px;color:rgba(242,238,230,.55);margin-top:30px}
+.ba-info .hint i{width:34px;height:1px;background:currentColor}
+.ba-pane{display:none}.ba-pane.on{display:contents}
+
+/* ---------- GALLERY ---------- */
+.gal-filters{display:flex;gap:6px;flex-wrap:wrap}
+.chip{padding:10px 18px;border-radius:999px;border:1px solid var(--line);font-size:14px;font-weight:500;transition:.25s;background:var(--paper)}
+.chip:hover{border-color:var(--ink)}
+.chip.on{background:var(--ink);color:var(--plaster);border-color:var(--ink)}
+.chip sup{font-family:var(--mono);font-size:9.5px;margin-left:4px;opacity:.6}
+.gal{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(90px,9vw,140px);gap:12px;margin-top:34px}
+.gi{position:relative;overflow:hidden;border-radius:4px;cursor:zoom-in;background:var(--plaster-2);transition:opacity .45s, transform .45s, filter .45s}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.1,1)}
+.gi:hover img{transform:scale(1.05)}
+.gi .meta{position:absolute;inset:auto 0 0 0;padding:44px 18px 16px;background:linear-gradient(transparent,rgba(15,18,22,.78));color:var(--plaster);display:flex;justify-content:space-between;align-items:end;opacity:0;transform:translateY(8px);transition:.35s}
+.gi:hover .meta{opacity:1;transform:none}
+.gi .meta b{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.05}
+.gi.dim{opacity:.12;filter:grayscale(1);pointer-events:none}
+.g1{grid-column:span 7;grid-row:span 4}.g2{grid-column:span 5;grid-row:span 2}.g3{grid-column:span 5;grid-row:span 2}
+.g4{grid-column:span 4;grid-row:span 3}.g5{grid-column:span 4;grid-row:span 3}.g6{grid-column:span 4;grid-row:span 3}
+.g7{grid-column:span 5;grid-row:span 3}.g8{grid-column:span 7;grid-row:span 3}
+
+.lb{position:fixed;inset:0;z-index:100;background:rgba(12,14,17,.94);display:none;align-items:center;justify-content:center;padding:60px}
+.lb.on{display:flex;animation:fade .3s}
+@keyframes fade{from{opacity:0}}
+.lb img{max-width:100%;max-height:82vh;border-radius:3px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb .cap{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:var(--plaster)}
+.lb button{position:absolute;color:var(--plaster);width:52px;height:52px;border-radius:50%;border:1px solid var(--line-l);font-size:20px;transition:.2s}
+.lb button:hover{background:var(--plaster);color:var(--ink)}
+.lb .x{top:22px;right:22px}.lb .pv{left:22px;top:50%;margin-top:-26px}.lb .nx{right:22px;top:50%;margin-top:-26px}
+
+/* ---------- WOOD TONES ---------- */
+.tones{background:var(--plaster)}
+.tones-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(32px,5vw,90px);align-items:center}
+.tones h2{font-size:clamp(46px,5.4vw,86px)}
+.tones h2 em{font-style:italic;color:var(--rust)}
+.tones .lead{font-size:18px;color:var(--ink-2);margin:28px 0 36px;max-width:480px}
+.planks{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;height:clamp(360px,38vw,540px)}
+.plank{position:relative;border-radius:3px;overflow:hidden;cursor:pointer;transition:flex .5s, transform .4s;background-size:cover}
+.plank::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(92deg,rgba(255,255,255,.0) 0 7px,rgba(0,0,0,.05) 7px 8px,rgba(255,255,255,.04) 8px 15px,rgba(0,0,0,.08) 15px 16px),linear-gradient(180deg,rgba(255,255,255,.12),rgba(0,0,0,.18));mix-blend-mode:multiply}
+.plank::after{content:"";position:absolute;left:0;right:0;top:38%;height:1px;background:rgba(0,0,0,.22)}
+.plank:nth-child(2)::after{top:62%}.plank:nth-child(3)::after{top:24%}.plank:nth-child(4)::after{top:71%}.plank:nth-child(5)::after{top:46%}
+.plank .nm{position:absolute;left:14px;bottom:14px;right:14px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.plank .nm b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.05;text-shadow:none}
+.plank:hover{transform:translateY(-8px)}
+.tone-note{display:flex;gap:14px;align-items:flex-start;padding:20px 0;border-top:1px solid var(--line);color:var(--ink-2);font-size:15px}
+.tone-note .mono{color:var(--rust);padding-top:3px;white-space:nowrap}
+
+/* ---------- ABOUT ---------- */
+.about-grid{display:grid;grid-template-columns:200px 1fr;gap:32px}
+.quote{font-family:var(--serif);font-size:clamp(36px,4.4vw,72px);line-height:1.06;letter-spacing:-.01em}
+.quote em{font-style:italic;color:var(--rust)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(50px,6vw,90px);border-top:1px solid var(--line)}
+.pillar{padding:30px 32px 10px 0}
+.pillar + .pillar{padding-left:32px;border-left:1px solid var(--line)}
+.pillar h4{font-family:var(--serif);font-weight:400;font-size:32px;margin:14px 0 12px}
+.pillar p{color:var(--mute);font-size:15px}
+.pillar .mono{color:var(--rust)}
+
+/* ---------- CONTACT ---------- */
+.contact{background:var(--ink);color:var(--plaster);overflow:hidden}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,110px)}
+.contact h2{font-size:clamp(56px,7.4vw,124px)}
+.contact h2 em{font-style:italic;color:var(--rust)}
+.bigphone{display:inline-block;font-family:var(--serif);font-size:clamp(40px,4.6vw,72px);margin-top:40px;border-bottom:1px solid var(--line-l);padding-bottom:6px;transition:color .25s,border-color .25s}
+.bigphone:hover{color:var(--rust);border-color:var(--rust)}
+.cinfo{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:56px}
+.cinfo .mono{color:rgba(242,238,230,.5);margin-bottom:10px;display:block}
+.cinfo p, .cinfo a{font-size:15.5px;color:rgba(242,238,230,.88)}
+.cinfo a:hover{color:#fff;text-decoration:underline}
+.hours{list-style:none;font-size:14.5px}
+.hours li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--line-l);color:rgba(242,238,230,.8)}
+.hours li.today{color:#fff}
+.hours li.today span:first-child::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--rust);margin-right:8px;vertical-align:middle}
+form.quote-form{background:var(--paper);color:var(--ink);border-radius:6px;padding:clamp(28px,3vw,44px)}
+form.quote-form h3{font-size:40px;margin-bottom:6px}
+form.quote-form > p{color:var(--mute);font-size:14.5px;margin-bottom:26px}
+.field{position:relative;margin-bottom:14px}
+.field label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:7px}
+.field input,.field textarea{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;font:inherit;font-size:16px;padding:8px 0 10px;color:var(--ink);outline:none;transition:border-color .25s;resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--rust)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.svc-pick{display:flex;flex-wrap:wrap;gap:7px;margin:4px 0 22px}
+.svc-pick label{cursor:pointer}
+.svc-pick input{display:none}
+.svc-pick span{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;transition:.2s}
+.svc-pick input:checked + span{background:var(--ink);color:var(--plaster);border-color:var(--ink)}
+.form-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px;flex-wrap:wrap}
+.form-foot small{color:var(--mute);font-size:12.5px;max-width:240px}
+.sent{display:none;text-align:center;padding:60px 10px}
+.sent h3{font-size:44px}
+.sent p{color:var(--mute);margin-top:10px}
+
+footer{background:var(--ink);color:rgba(242,238,230,.6);border-top:1px solid var(--line-l)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:28px;gap:20px;flex-wrap:wrap;font-size:13px}
+footer .brand-name{color:var(--plaster);font-size:22px}
+.footer-word{font-family:var(--serif);font-size:clamp(90px,19vw,330px);line-height:.8;color:var(--ink-2);letter-spacing:-.04em;padding:40px var(--pad) 0;white-space:nowrap;overflow:hidden;user-select:none}
+.footer-word em{color:var(--rust);opacity:.55}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.7,.1,1), transform 1s cubic-bezier(.2,.7,.1,1)}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}
+
+.mobile-call{display:none}
+
+@media (max-width:1080px){
+  .nav-links{display:none}
+  .burger{display:block}
+  nav.main .btn-ink{display:none}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-media{aspect-ratio:4/3}
+  .sec-head{grid-template-columns:1fr;gap:16px}
+  .sec-head .idx{padding:0}
+  .svc{grid-template-columns:1fr;gap:20px}
+  .svc .num{padding:0}
+  .svc-more{grid-template-columns:1fr;gap:0}
+  .svc-more > div:first-child{display:none}
+  .ba-stage{grid-template-columns:1fr}
+  .tones-grid,.contact-grid,.about-grid{grid-template-columns:1fr}
+  .about-grid > .mono{display:none}
+  .pillars{grid-template-columns:1fr}
+  .pillar + .pillar{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  .gal{grid-template-columns:repeat(6,1fr)}
+  .g1{grid-column:span 6;grid-row:span 3}.g2,.g3{grid-column:span 3;grid-row:span 2}
+  .g4,.g5,.g6{grid-column:span 3;grid-row:span 2}.g6{grid-column:span 6}
+  .g7,.g8{grid-column:span 6;grid-row:span 3}
+}
+@media (max-width:640px){
+  .topbar .hide-s{display:none}
+  .planks{grid-template-columns:repeat(5,1fr);height:320px}
+  .plank .nm b{font-size:17px}.plank .nm .mono{display:none}
+  .cinfo,.row2{grid-template-columns:1fr}
+  .svc .media.duo{grid-template-columns:1fr}
+  .mobile-call{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;justify-content:center;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+  .lb{padding:16px}
+}
+.mnav{position:fixed;inset:0;z-index:90;background:var(--ink);color:var(--plaster);display:none;flex-direction:column;padding:28px var(--pad)}
+.mnav.on{display:flex}
+.mnav a.l{font-family:var(--serif);font-size:52px;line-height:1.2;border-bottom:1px solid var(--line-l);padding:8px 0}
+.mnav .close{align-self:flex-end;width:48px;height:48px;border-radius:50%;border:1px solid var(--line-l);font-size:20px;margin-bottom:30px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><span class="dot"></span><span id="openStatus">Open Mon–Sat · 7:00 AM – 7:00 PM</span></span>
+    <span class="mono hide-s">Residential &amp; Commercial · Cleveland, Ohio</span>
+    <a href="tel:+12165123623">(216) 512-3623</a>
+  </div>
+</div>
+
+<nav class="main" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Wilson Painting And Remodeling">
+      <div class="brand-mark"><span>W</span></div>
+      <div><div class="brand-name">Wilson</div><span class="brand-sub">Painting &amp; Remodeling</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#transformations">Before &amp; After</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#flooring">Hardwood</a>
+      <a href="#about">About</a>
+    </div>
+    <a href="#contact" class="btn btn-ink">Get a free quote <span class="arr">→</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><i></i><i></i></button>
+  </div>
+</nav>
+
+<div class="mnav" id="mnav">
+  <button class="close" id="mclose" aria-label="Close">✕</button>
+  <a class="l" href="#services">Services</a>
+  <a class="l" href="#transformations">Before &amp; After</a>
+  <a class="l" href="#gallery">Gallery</a>
+  <a class="l" href="#flooring">Hardwood</a>
+  <a class="l" href="#about">About</a>
+  <a class="l" href="#contact">Free quote</a>
+  <a href="tel:+12165123623" class="btn btn-rust" style="margin-top:30px;align-self:flex-start">Call (216) 512-3623</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top" data-screen-label="Hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow mono">Painting · Drywall · Hardwood · Cleveland, OH</div>
+      <h1>A quick lick of paint, or a <em>whole new</em> look.</h1>
+      <p class="hero-lede">Wilson Painting And Remodeling brings expert painters and decorators to Cleveland homes and commercial buildings — an excellent finish, delivered by a reliable, hard‑working crew at an honest price.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-rust">Book a free quote <span class="arr">→</span></a>
+        <a href="#transformations" class="btn btn-line">See the transformations</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="../img/int-moulding.jpg" alt="Bright painted interior with detailed millwork and coffered ceiling">
+      <span class="hero-tag mono">Interior painting</span>
+      <div class="hero-chip">
+        <div class="sw"><i style="background:#f2eee6;border:1px solid var(--line)"></i><i style="background:#c9bfae"></i><i style="background:oklch(0.58 0.13 42)"></i><i style="background:#262c33"></i></div>
+        <div><b>Free quotes</b><small>Call or send a message today</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="svc-strip" aria-hidden="true">
+    <div class="svc-track">
+      <span>Interior Painting</span><span>Exterior Painting</span><span>Drywall Finishing</span><span>Hardwood Flooring</span><span>Wallpapering</span><span>Wood Staining</span>
+      <span>Interior Painting</span><span>Exterior Painting</span><span>Drywall Finishing</span><span>Hardwood Flooring</span><span>Wallpapering</span><span>Wood Staining</span>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section class="sec" id="services" data-screen-label="Services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="idx mono">01 — Services</span>
+      <h2>Four trades,<br>one <em>standard</em> of finish.</h2>
+      <p>From residential rooms to commercial buildings, every job gets the same careful prep and clean, lasting result.</p>
+    </div>
+
+    <div class="svc-list">
+      <article class="svc rv">
+        <div class="num">No. 01 / Interior</div>
+        <div class="copy">
+          <h3>Interior <em>Painting</em></h3>
+          <p>Walls, ceilings, trim and millwork — our painters and decorators deliver an excellent finish at affordable prices, whether you want a single room refreshed or an entirely new look throughout.</p>
+          <div class="tags"><span>Walls &amp; ceilings</span><span>Trim &amp; millwork</span><span>Wallpapering</span><span>Residential</span><span>Commercial</span></div>
+        </div>
+        <div class="media"><img src="../img/int-crown.jpg" alt="Painted living room with built-ins and crown molding" loading="lazy"><span class="cap mono">Interior</span></div>
+      </article>
+
+      <article class="svc rv">
+        <div class="num">No. 02 / Exterior</div>
+        <div class="copy">
+          <h3>Exterior <em>Painting</em></h3>
+          <p>Cleveland’s homes deserve curb appeal that holds up to the lake‑effect seasons. We handle siding, trim and detail work on houses and commercial buildings, plus wood staining for the surfaces that should show their grain.</p>
+          <div class="tags"><span>Siding &amp; trim</span><span>Wood staining</span><span>Multi‑color schemes</span><span>Commercial exteriors</span></div>
+        </div>
+        <div class="media"><img src="../img/cle-house.jpg" alt="Freshly painted historic house exterior" loading="lazy"><span class="cap mono">Exterior</span></div>
+      </article>
+
+      <article class="svc rv">
+        <div class="num">No. 03 / Drywall</div>
+        <div class="copy">
+          <h3>Drywall <em>Finishing</em></h3>
+          <p>Professional drywall projects are investments that should provide long‑term service and value. We offer residential and commercial drywall services — home remodeling, custom drywall, new home construction and office build‑outs — plus repairs for mould, water and fire damage.</p>
+          <div class="tags"><span>Installation</span><span>Taping &amp; finishing</span><span>Mould, water &amp; fire repair</span><span>Office build‑outs</span></div>
+        </div>
+        <div class="media duo">
+          <div><img src="../img/drywall-tape.jpg" alt="Drywall seams being taped and finished" loading="lazy" style="width:100%;height:100%;object-fit:cover"><span class="cap mono" style="position:absolute;left:12px;bottom:12px;background:var(--paper);padding:6px 10px">Taping</span></div>
+          <div><img src="../img/dw-raw.jpg" alt="Hung drywall with mudded joints" loading="lazy" style="width:100%;height:100%;object-fit:cover"><span class="cap mono" style="position:absolute;left:12px;bottom:12px;background:var(--paper);padding:6px 10px">Mudding</span></div>
+        </div>
+      </article>
+
+      <article class="svc rv">
+        <div class="num">No. 04 / Flooring</div>
+        <div class="copy">
+          <h3>Hardwood <em>Flooring</em></h3>
+          <p>Solid wood floors can be expensive — so we handle yours with care. Competitive prices and masterful fitting mean you can finally have the solid wooden floor you’ve always dreamed of, from light oak to dark, rich mahogany.</p>
+          <div class="tags"><span>Solid hardwood</span><span>Fitting &amp; installation</span><span>Oak to mahogany</span></div>
+        </div>
+        <div class="media"><img src="../img/floor-custom.jpg" alt="Finished hardwood floor in a kitchen" loading="lazy"><span class="cap mono">Hardwood</span></div>
+      </article>
+    </div>
+
+    <div class="svc-more rv">
+      <div></div>
+      <div class="mini"><span class="mono" style="color:var(--rust)">+</span><div><h4>Wallpapering</h4><p>Hung straight, matched clean, finished neatly at every edge.</p></div></div>
+      <div class="mini"><span class="mono" style="color:var(--rust)">+</span><div><h4>Wood Staining</h4><p>Stain work that brings out the natural character of the grain.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMATIONS -->
+<section class="sec dark" id="transformations" data-screen-label="Before & After">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="idx mono">02 — Before &amp; After</span>
+      <h2>Drag to see<br>the <em>difference.</em></h2>
+      <p>Transformations are the clearest proof of the work. Slide across each project to compare where it started and how it finished.</p>
+    </div>
+
+    <div class="ba-tabs rv" role="tablist">
+      <button class="ba-tab on" data-i="0">Exterior repaint</button>
+      <button class="ba-tab" data-i="1">Drywall &amp; paint</button>
+    </div>
+
+    <div class="ba-stage rv">
+      <div class="ba" id="ba">
+        <img class="before" id="baB" src="../img/vic-2.jpg" alt="Before">
+        <img class="after" id="baA" src="../img/vic-1.jpg" alt="After">
+        <span class="lbl b mono">Before</span><span class="lbl a mono">After</span>
+        <div class="handle"><div class="knob">‹›</div></div>
+      </div>
+      <div class="ba-info">
+        <div>
+          <span class="mono" id="baK" style="color:var(--rust)">Exterior · Multi‑color scheme</span>
+          <h3 id="baT">A faded façade, brought back to life</h3>
+          <p id="baP">Tired, sun‑washed paint replaced with a rich, multi‑color scheme that highlights the house’s trim, porch and architectural detail.</p>
+        </div>
+        <div>
+          <div class="hint mono"><i></i>Drag the handle or use ← →</div>
+          <a href="#contact" class="btn btn-rust" style="margin-top:26px">Start your transformation <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery" data-screen-label="Gallery">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="idx mono">03 — Project Gallery</span>
+      <h2>Finished, <em>inside</em><br>and out.</h2>
+      <div class="gal-filters" id="filters">
+        <button class="chip on" data-f="all">All</button>
+        <button class="chip" data-f="interior">Interior</button>
+        <button class="chip" data-f="exterior">Exterior</button>
+        <button class="chip" data-f="drywall">Drywall</button>
+        <button class="chip" data-f="flooring">Flooring</button>
+      </div>
+    </div>
+
+    <div class="gal" id="gal">
+      <figure class="gi g1 rv" data-c="interior"><img src="../img/int-moulding.jpg" alt="Open-plan interior with painted millwork" loading="lazy"><figcaption class="meta"><b>Open‑plan living</b><span class="mono">Interior</span></figcaption></figure>
+      <figure class="gi g2 rv" data-c="exterior"><img src="../img/vic-1.jpg" alt="Painted Victorian home exterior" loading="lazy"><figcaption class="meta"><b>Victorian repaint</b><span class="mono">Exterior</span></figcaption></figure>
+      <figure class="gi g3 rv" data-c="flooring"><img src="../img/floor-install.jpg" alt="Hardwood floor being installed" loading="lazy"><figcaption class="meta"><b>Plank installation</b><span class="mono">Flooring</span></figcaption></figure>
+      <figure class="gi g4 rv" data-c="exterior"><img src="../img/hist-2.jpg" alt="Painted historic house with porch" loading="lazy"><figcaption class="meta"><b>Porch &amp; trim</b><span class="mono">Exterior</span></figcaption></figure>
+      <figure class="gi g5 rv" data-c="drywall"><img src="../img/dw-after.jpg" alt="Finished drywall partition, painted" loading="lazy"><figcaption class="meta"><b>Commercial build‑out</b><span class="mono">Drywall</span></figcaption></figure>
+      <figure class="gi g6 rv" data-c="interior"><img src="../img/int-spruce.jpg" alt="Living room with painted fireplace surround" loading="lazy"><figcaption class="meta"><b>Fireplace room</b><span class="mono">Interior</span></figcaption></figure>
+      <figure class="gi g7 rv" data-c="flooring"><img src="../img/floor-oak.jpg" alt="Wide plank white oak flooring" loading="lazy"><figcaption class="meta"><b>Wide‑plank oak</b><span class="mono">Flooring</span></figcaption></figure>
+      <figure class="gi g8 rv" data-c="interior"><img src="../img/int-crown.jpg" alt="Living room with built-in shelving" loading="lazy"><figcaption class="meta"><b>Built‑ins &amp; crown</b><span class="mono">Interior</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="x" id="lbx" aria-label="Close">✕</button>
+  <button class="pv" id="lbp" aria-label="Previous">←</button>
+  <img id="lbi" alt="">
+  <button class="nx" id="lbn" aria-label="Next">→</button>
+  <div class="cap mono" id="lbc"></div>
+</div>
+
+<!-- HARDWOOD TONES -->
+<section class="sec tones" id="flooring" data-screen-label="Hardwood">
+  <div class="wrap tones-grid">
+    <div class="rv">
+      <span class="mono" style="color:var(--mute)">04 — Hardwood Flooring</span>
+      <h2 style="margin-top:22px">From light oak<br>to <em>rich mahogany.</em></h2>
+      <p class="lead">“We can make anything fit your floor perfectly.” Choose the tone that suits your home — we’ll handle the fitting with care, at competitive prices.</p>
+      <div class="tone-note"><span class="mono">Our promise</span><span>We guarantee we won’t be beaten on price, service, or expertise.</span></div>
+      <div class="tone-note"><span class="mono">Selected</span><span id="toneSel">Light oak — airy, bright and timeless.</span></div>
+      <a href="#contact" class="btn btn-ink" style="margin-top:24px" id="toneCta">Ask about flooring <span class="arr">→</span></a>
+    </div>
+    <div class="planks rv rv-d1" id="planks">
+      <div class="plank" style="background:linear-gradient(180deg,#e2c79c,#cfae7c)" data-d="Light oak — airy, bright and timeless."><div class="nm"><span class="mono">Tone 01</span><b>Light Oak</b></div></div>
+      <div class="plank" style="background:linear-gradient(180deg,#c99a63,#ad7e48)" data-d="Natural maple & honey tones — warm without going dark."><div class="nm"><span class="mono">Tone 02</span><b>Honey</b></div></div>
+      <div class="plank" style="background:linear-gradient(180deg,#9b6a3f,#7f532d)" data-d="Mid‑brown walnut‑style tones — classic and forgiving."><div class="nm"><span class="mono">Tone 03</span><b>Walnut</b></div></div>
+      <div class="plank" style="background:linear-gradient(180deg,#7a3e26,#5f2c19)" data-d="Dark, rich mahogany — deep color with real presence."><div class="nm"><span class="mono">Tone 04</span><b>Mahogany</b></div></div>
+      <div class="plank" style="background:linear-gradient(180deg,#4a3326,#2f2019)" data-d="Espresso — a dramatic, near‑black finish."><div class="nm"><span class="mono">Tone 05</span><b>Espresso</b></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about" data-screen-label="About">
+  <div class="wrap about-grid">
+    <span class="mono" style="color:var(--mute);padding-top:14px">05 — About</span>
+    <div>
+      <p class="quote rv">Residential or commercial, we pride ourselves on being <em>reliable</em> and <em>hard‑working</em> — and on an excellent finish at a price that makes sense.</p>
+      <div class="pillars">
+        <div class="pillar rv"><span class="mono">Reliable</span><h4>A crew you can count on</h4><p>Dependable scheduling and steady, hard‑working painters and decorators on every job.</p></div>
+        <div class="pillar rv rv-d1"><span class="mono">Affordable</span><h4>Honest, competitive pricing</h4><p>Incredible service and an excellent finish without the premium price tag — and free quotes to start.</p></div>
+        <div class="pillar rv rv-d2"><span class="mono">Versatile</span><h4>Homes &amp; businesses</h4><p>Painting, wallpapering, staining, drywall and hardwood for residential and commercial properties.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact" data-screen-label="Contact">
+  <div class="wrap contact-grid">
+    <div class="rv">
+      <span class="mono" style="color:rgba(242,238,230,.55)">06 — Free Quote</span>
+      <h2 style="margin-top:22px">Let’s talk<br>about your <em>space.</em></h2>
+      <a href="tel:+12165123623" class="bigphone">(216) 512‑3623</a>
+      <div class="cinfo">
+        <div>
+          <span class="mono">Based in</span>
+          <p>Lena Ave, Cleveland, Ohio 44135<br>Riverside neighborhood</p>
+          <span class="mono" style="margin-top:24px">Email</span>
+          <a href="mailto:alw8833@gmail.com">alw8833@gmail.com</a>
+          <span class="mono" style="margin-top:24px">Payment</span>
+          <p>Please note: credit cards are not accepted.</p>
+        </div>
+        <div>
+          <span class="mono">Opening hours</span>
+          <ul class="hours" id="hours">
+            <li data-d="1"><span>Monday</span><span>7 AM – 7 PM</span></li>
+            <li data-d="2"><span>Tuesday</span><span>7 AM – 7 PM</span></li>
+            <li data-d="3"><span>Wednesday</span><span>7 AM – 7 PM</span></li>
+            <li data-d="4"><span>Thursday</span><span>7 AM – 7 PM</span></li>
+            <li data-d="5"><span>Friday</span><span>7 AM – 7 PM</span></li>
+            <li data-d="6"><span>Saturday</span><span>7 AM – 7 PM</span></li>
+            <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <form class="quote-form rv rv-d1" id="qf">
+      <div id="formBody">
+        <h3>Request a free quote</h3>
+        <p>Tell us about your project and we’ll get back to you.</p>
+        <div class="field"><label>Services needed</label></div>
+        <div class="svc-pick">
+          <label><input type="checkbox" name="s" value="Interior"><span>Interior painting</span></label>
+          <label><input type="checkbox" name="s" value="Exterior"><span>Exterior painting</span></label>
+          <label><input type="checkbox" name="s" value="Drywall"><span>Drywall</span></label>
+          <label><input type="checkbox" name="s" value="Flooring" id="cbFloor"><span>Hardwood flooring</span></label>
+          <label><input type="checkbox" name="s" value="Wallpaper"><span>Wallpapering</span></label>
+          <label><input type="checkbox" name="s" value="Staining"><span>Wood staining</span></label>
+        </div>
+        <div class="field"><label for="n">Your name</label><input id="n" required autocomplete="name"></div>
+        <div class="row2">
+          <div class="field"><label for="e">Email</label><input id="e" type="email" required autocomplete="email"></div>
+          <div class="field"><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="m">Tell us about your request</label><textarea id="m" rows="3"></textarea></div>
+        <div class="form-foot">
+          <small>Prefer to talk? Call (216) 512‑3623, Mon–Sat 7 AM – 7 PM.</small>
+          <button class="btn btn-rust" type="submit">Send request <span class="arr">→</span></button>
+        </div>
+      </div>
+      <div class="sent" id="sent">
+        <span class="mono" style="color:var(--rust)">Message sent</span>
+        <h3 style="margin-top:12px">Thank you.</h3>
+        <p>We’ve received your request and will be in touch soon.</p>
+      </div>
+    </form>
+  </div>
+  <div class="footer-word" aria-hidden="true">Wilson<em>.</em></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><div class="brand-mark" style="width:34px;height:34px;font-size:20px"><span>W</span></div><span class="brand-name">Wilson Painting And Remodeling</span></div>
+    <span>Interior &amp; Exterior Painting · Drywall · Hardwood Flooring — Cleveland, OH</span>
+    <span>© <span id="yr"></span> Wilson Painting And Remodeling</span>
+  </div>
+</footer>
+
+<a href="tel:+12165123623" class="btn btn-rust mobile-call">Call for a free quote · (216) 512‑3623</a>
+
+<script>
+(function(){
+  // nav
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+  const mnav=document.getElementById('mnav');
+  document.getElementById('burger').onclick=()=>mnav.classList.add('on');
+  document.getElementById('mclose').onclick=()=>mnav.classList.remove('on');
+  mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mnav.classList.remove('on')));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // open status + today's hours
+  const now=new Date(), d=now.getDay(), h=now.getHours();
+  const open=d!==0 && h>=7 && h<19;
+  document.getElementById('openStatus').textContent=open?'Open now · until 7:00 PM':'Closed now · Open Mon–Sat 7:00 AM – 7:00 PM';
+  const li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+
+  // reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  // before/after
+  const projects=[
+    {b:'../img/vic-2.jpg',a:'../img/vic-1.jpg',k:'Exterior · Multi‑color scheme',t:'A faded façade, brought back to life',p:'Tired, sun‑washed paint replaced with a rich, multi‑color scheme that highlights the house’s trim, porch and architectural detail.'},
+    {b:'../img/dw-before.jpg',a:'../img/dw-after.jpg',k:'Drywall · Commercial build‑out',t:'From bare board to a clean, painted wall',p:'New drywall partitions taped, finished smooth and painted — the kind of office build‑out work our drywall services cover.'}
+  ];
+  const ba=document.getElementById('ba');
+  let pos=50, dragging=false;
+  const setP=v=>{pos=Math.max(0,Math.min(100,v));ba.style.setProperty('--p',pos+'%')};
+  const fromEvt=e=>{const r=ba.getBoundingClientRect();setP((e.clientX-r.left)/r.width*100)};
+  ba.addEventListener('pointerdown',e=>{dragging=true;ba.setPointerCapture(e.pointerId);fromEvt(e)});
+  ba.addEventListener('pointermove',e=>{if(dragging)fromEvt(e)});
+  ba.addEventListener('pointerup',()=>dragging=false);
+  ba.tabIndex=0;
+  ba.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')setP(pos-5);if(e.key==='ArrowRight')setP(pos+5)});
+  // intro sweep
+  let swept=false;
+  new IntersectionObserver((es,o)=>{es.forEach(e=>{if(e.isIntersecting&&!swept){swept=true;o.disconnect();sweep()}})},{threshold:.5}).observe(ba);
+  function sweep(){const t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1800);const v=50+Math.sin(k*Math.PI*2)*28*(1-k);setP(v);if(k<1&&!dragging)requestAnimationFrame(f)})(t0)}
+  document.querySelectorAll('.ba-tab').forEach(btn=>btn.onclick=()=>{
+    document.querySelectorAll('.ba-tab').forEach(b=>b.classList.toggle('on',b===btn));
+    const p=projects[+btn.dataset.i];
+    ['baB','baA'].forEach(id=>document.getElementById(id).style.opacity=0);
+    setTimeout(()=>{document.getElementById('baB').src=p.b;document.getElementById('baA').src=p.a;
+      document.getElementById('baK').textContent=p.k;document.getElementById('baT').textContent=p.t;document.getElementById('baP').textContent=p.p;
+      ['baB','baA'].forEach(id=>document.getElementById(id).style.opacity=1);setP(50);sweep();},220);
+  });
+  ['baB','baA'].forEach(id=>document.getElementById(id).style.transition='opacity .22s');
+
+  // gallery filter
+  const items=[...document.querySelectorAll('.gi')];
+  document.querySelectorAll('#filters .chip').forEach(c=>{
+    const f=c.dataset.f; const n=f==='all'?items.length:items.filter(i=>i.dataset.c===f).length;
+    c.insertAdjacentHTML('beforeend','<sup>'+String(n).padStart(2,'0')+'</sup>');
+    c.onclick=()=>{document.querySelectorAll('#filters .chip').forEach(x=>x.classList.toggle('on',x===c));
+      items.forEach(i=>i.classList.toggle('dim',f!=='all'&&i.dataset.c!==f));}
+  });
+
+  // lightbox
+  const lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbc=document.getElementById('lbc');let cur=0,list=items;
+  const show=i=>{list=items.filter(x=>!x.classList.contains('dim'));cur=(i+list.length)%list.length;const it=list[cur];lbi.src=it.querySelector('img').src;lbi.alt=it.querySelector('img').alt;lbc.textContent=it.querySelector('b').textContent+' — '+it.querySelector('.meta .mono').textContent+'  ·  '+(cur+1)+' / '+list.length;lb.classList.add('on')};
+  items.forEach(it=>it.onclick=()=>{list=items.filter(x=>!x.classList.contains('dim'));show(list.indexOf(it))});
+  document.getElementById('lbx').onclick=()=>lb.classList.remove('on');
+  document.getElementById('lbp').onclick=e=>{e.stopPropagation();show(cur-1)};
+  document.getElementById('lbn').onclick=e=>{e.stopPropagation();show(cur+1)};
+  lb.onclick=e=>{if(e.target===lb)lb.classList.remove('on')};
+  addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+
+  // planks
+  const sel=document.getElementById('toneSel');
+  document.querySelectorAll('.plank').forEach(p=>p.onclick=()=>{sel.textContent=p.dataset.d;document.querySelectorAll('.plank').forEach(x=>x.style.outline='none');p.style.outline='2px solid var(--ink)';p.style.outlineOffset='3px'});
+  document.getElementById('toneCta').onclick=()=>{const cb=document.getElementById('cbFloor');cb.checked=true;const m=document.getElementById('m');if(!m.value)m.value='Hardwood flooring — interested in: '+sel.textContent.split(' —')[0]};
+
+  // form
+  document.getElementById('qf').addEventListener('submit',e=>{e.preventDefault();document.getElementById('formBody').style.display='none';document.getElementById('sent').style.display='block'});
+})();
+</script>
+</body>
+</html>
